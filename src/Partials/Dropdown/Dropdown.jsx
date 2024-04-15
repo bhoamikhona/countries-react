@@ -5,7 +5,6 @@ import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDown
 function Dropdown() {
   const [continent, setContinent] = useState("");
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState(false);
 
   const continents = {
     africa: "Africa",
