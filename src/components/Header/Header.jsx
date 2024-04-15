@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import Theme from "../Theme/Theme.jsx";
+import Theme from "../../Partials/Theme/Theme.jsx";
 
 function Header() {
   return (

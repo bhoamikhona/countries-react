@@ -1,0 +1,7 @@
+.filter-bar {
+  margin: 4.8rem 8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

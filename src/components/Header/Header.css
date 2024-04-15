@@ -12,6 +12,7 @@
 .logo:visited {
   text-decoration: none;
   color: var(--text);
+  font-family: var(--font);
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 800;

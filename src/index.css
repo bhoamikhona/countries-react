@@ -3,13 +3,19 @@
   --component-background: #fff;
   --text: #111517;
   --placeholder: #848484;
+  --search: #848484;
+  --down-arrow: #000;
+
+  --font: "Nunito Sans", sans-serif;
 }
 
 [data-theme="dark"] {
   --background: #202c36;
   --component-background: #2b3844;
   --text: #fff;
-  --placeholder: #fff;
+  --placeholder: rgba(255, 255, 255, 0.5);
+  --search: #fff;
+  --down-arrow: #fff;
 }
 
 * {
@@ -25,7 +31,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: var(--font);
   color: var(--text);
   background-color: var(--background);
 }

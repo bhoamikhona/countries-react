@@ -1,8 +1,10 @@
 .theme {
   display: flex;
+  justify-content: stretch;
+  align-items: stretch;
   gap: 0.8rem;
 
-  font-family: "Nunito Sans";
+  font-family: var(--font);
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 600;
