@@ -1,5 +1,16 @@
 .theme {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 0.8rem;
+
+  font-family: "Nunito Sans";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+
+  cursor: pointer;
 }
