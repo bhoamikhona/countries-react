@@ -2,16 +2,14 @@ import React from "react";
 import "./Search.css";
 import SearchIcon from "@mui/icons-material/Search";
 
-function Search() {
-  const handleSubmit = function (e) {
-    e.preventDefault();
+function Search({ onSearch }) {
+  const handleChange = function (e) {
+    onSearch(e.target.value);
   };
 
   return (
-    <form className="search__form">
-      <button type="submit" className="search__btn" onClick={handleSubmit}>
-        <SearchIcon className="search__icon" fontSize="large" />
-      </button>
+    <div className="search__form">
+      <SearchIcon className="search__icon" fontSize="large" />
       <div className="input-control">
         <label htmlFor="search" className="search__label">
           Search:
@@ -21,9 +19,10 @@ function Search() {
           className="search__input"
           placeholder="Search for a country…"
           autoComplete="off"
+          onChange={handleChange}
         />
       </div>
-    </form>
+    </div>
   );
 }
 

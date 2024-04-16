@@ -5,6 +5,7 @@
   --placeholder: #848484;
   --search: #848484;
   --down-arrow: #000;
+  --component-hover: #fdfdfd;
 
   --font: "Nunito Sans", sans-serif;
 }
@@ -16,13 +17,14 @@
   --placeholder: rgba(255, 255, 255, 0.5);
   --search: #fff;
   --down-arrow: #fff;
+  --component-hover: #334250;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 0.3s all ease-out;
+  transition: 0.1s all ease-out;
 }
 
 html {

@@ -3,11 +3,11 @@ import "./FilterBar.css";
 import Search from "../../Partials/Search/Search.jsx";
 import Dropdown from "../../Partials/Dropdown/Dropdown.jsx";
 
-function FilterBar() {
+function FilterBar({ onSearch }) {
   return (
     <div className="filter-bar">
       <div className="filter-bar__left">
-        <Search />
+        <Search onSearch={onSearch} />
       </div>
       <div className="filter-bar__right">
         <Dropdown />
