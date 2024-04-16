@@ -1,9 +1,17 @@
 import React from "react";
 import "./Card.css";
+import { useNavigate } from "react-router-dom";
 
 function Card({ name, pop, region, capital, alt, flag }) {
+  const router = useNavigate();
+
+  const redirect = async function (name) {
+    // console.log(name);
+    router(`/country/${name}`);
+  };
+
   return (
-    <div className="card">
+    <div className="card" onClick={() => redirect(name)}>
       <div className="card__img-container">
         <img src={flag} alt={alt} className="card__img" />
       </div>
