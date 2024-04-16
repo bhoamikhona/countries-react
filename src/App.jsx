@@ -6,6 +6,8 @@ import Header from "./components/Header/Header.jsx";
 import { useContext } from "react";
 import { CountriesContext } from "./context/CountriesContextProvider.jsx";
 
+export const formatNumber = (number) => Intl.NumberFormat().format(number);
+
 function App() {
   const { data } = useContext(CountriesContext);
 

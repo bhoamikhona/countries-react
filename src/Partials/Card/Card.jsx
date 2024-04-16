@@ -1,6 +1,7 @@
 import React from "react";
 import "./Card.css";
 import { useNavigate } from "react-router-dom";
+import { formatNumber } from "../../App.jsx";
 
 function Card({ name, pop, region, capital, alt, flag }) {
   const router = useNavigate();
@@ -20,9 +21,7 @@ function Card({ name, pop, region, capital, alt, flag }) {
         <ul className="card__list">
           <li className="card__list-item">
             <strong className="card__stat">Population: </strong>
-            <span className="card__stat-value">
-              {Intl.NumberFormat().format(pop)}
-            </span>
+            <span className="card__stat-value">{formatNumber(pop)}</span>
           </li>
           <li className="card__list-item">
             <strong className="card__stat">Region: </strong>

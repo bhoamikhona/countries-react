@@ -2,12 +2,14 @@ import React, { useContext, useEffect } from "react";
 import "./Country.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { CountriesContext } from "../../context/CountriesContextProvider.jsx";
+import { formatNumber } from "../../App.jsx";
 
 function Country() {
   const { name } = useParams();
   const { data } = useContext(CountriesContext);
   const countryData = data.find((country) => country.name.common === name);
   console.log(countryData);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -43,20 +45,20 @@ function Country() {
             </div>
           </div>
           <div className="article__right">
-            <h1 className="article__title">{countryData?.name?.common}</h1>
+            <h1 className="article__title">{countryData?.name?.official}</h1>
             <div className="article__table">
               <div className="article__table--left">
                 <ul className="table__list">
                   <li className="table__list-item">
                     <strong className="table__key">Native Name: </strong>
                     <span className="table__value">
-                      {countryData?.name?.nativeName?.ron?.common}
+                      {Object.values(countryData.name.nativeName)[0].official}
                     </span>
                   </li>
                   <li className="table__list-item">
                     <strong className="table__key">Population: </strong>
                     <span className="table__value">
-                      {countryData?.population}
+                      {formatNumber(countryData?.population)}
                     </span>
                   </li>
                   <li className="table__list-item">
@@ -86,12 +88,9 @@ function Country() {
                     <span className="table__value">
                       {countryData?.currencies &&
                         Object.keys(countryData.currencies).map(
-                          (currencyCode, index) => (
+                          (currencyCode) => (
                             <span key={currencyCode}>
                               {countryData.currencies[currencyCode]?.name}
-                              {index !==
-                                Object.keys(countryData.currencies).length -
-                                  1 && ", "}
                             </span>
                           )
                         )}
@@ -107,23 +106,22 @@ function Country() {
                 </ul>
               </div>
             </div>
-            <div className="borders__container">
-              {countryData?.borders && (
+            {countryData?.borders && (
+              <div className="borders__container">
                 <span className="table__key">Borders: </span>
-              )}
-              <div className="border__btn-container">
-                {countryData?.borders &&
-                  countryData.borders.map((borderingCountry, index) => (
+                <div className="border__btn-container">
+                  {countryData.borders.map((borderingCountry) => (
                     <Link
                       className="borders__btn"
-                      key={index}
+                      key={borderingCountry}
                       to={`/country/${getFullName(borderingCountry)}`}
                     >
                       {getFullName(borderingCountry)}
                     </Link>
                   ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </article>
       ) : (
