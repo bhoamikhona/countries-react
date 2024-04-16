@@ -86,14 +86,7 @@ function Country() {
                   <li className="table__list-item">
                     <strong className="table__key">Currencies: </strong>
                     <span className="table__value">
-                      {countryData?.currencies &&
-                        Object.keys(countryData.currencies).map(
-                          (currencyCode) => (
-                            <span key={currencyCode}>
-                              {countryData.currencies[currencyCode]?.name}
-                            </span>
-                          )
-                        )}
+                      {Object.values(countryData.currencies)[0].name}
                     </span>
                   </li>
                   <li className="table__list-item">
