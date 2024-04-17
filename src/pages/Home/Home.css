@@ -1,9 +1,33 @@
 .main {
-  margin: 0 8rem 4.5rem;
+  padding: 0 8rem;
+  margin: 0 auto 4.5rem;
+
+  max-width: 144rem;
+  width: 100%;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   column-gap: 7.5rem;
   row-gap: 6.7rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 100em) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 76.875em) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 53.25em) {
+  .main {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -23,6 +23,11 @@
   line-height: 2rem;
 
   cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.dropdown__btn:hover {
+  background-color: var(--component-hover);
 }
 
 .dropdown__text {
@@ -75,4 +80,9 @@
   line-height: 2rem;
 
   cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.menu__btn:hover {
+  opacity: 0.5;
 }

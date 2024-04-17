@@ -55,3 +55,9 @@
   font: inherit;
   color: var(--placeholder);
 }
+
+@media (max-width: 40em) {
+  .search__form {
+    width: 37.5rem;
+  }
+}

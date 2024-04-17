@@ -3,6 +3,7 @@ import "./Dropdown.css";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 
 function Dropdown({ onFilter }) {
+  // FIXME: filter functionality still needs some fixing
   const [continent, setContinent] = useState("");
   const [open, setOpen] = useState(false);
 
