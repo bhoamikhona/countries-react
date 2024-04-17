@@ -1,0 +1,23 @@
+.attribution__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2.4rem 8rem;
+  background-color: var(--component-background);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+}
+
+.attribution__link:link,
+.attribution__link:visited {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--text);
+  transition: all 0.3s ease-out;
+}
+
+.attribution__link:hover,
+.attribution__link:active {
+  opacity: 0.5;
+  border: none;
+}
