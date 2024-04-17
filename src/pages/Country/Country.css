@@ -176,6 +176,10 @@
   .article__left {
     align-self: flex-start;
   }
+
+  .article__right {
+    width: 100%;
+  }
 }
 
 @media (max-width: 50.625em) {
