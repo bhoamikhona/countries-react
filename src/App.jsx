@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/country/:name" element={<Country />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
