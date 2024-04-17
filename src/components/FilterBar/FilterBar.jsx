@@ -3,14 +3,14 @@ import "./FilterBar.css";
 import Search from "../../Partials/Search/Search.jsx";
 import Dropdown from "../../Partials/Dropdown/Dropdown.jsx";
 
-function FilterBar({ onSearch }) {
+function FilterBar({ onSearch, onFilter }) {
   return (
     <div className="filter-bar">
       <div className="filter-bar__left">
         <Search onSearch={onSearch} />
       </div>
       <div className="filter-bar__right">
-        <Dropdown />
+        <Dropdown onFilter={onFilter} />
       </div>
     </div>
   );

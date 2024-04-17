@@ -17,13 +17,20 @@ function Home() {
     setFilteredCountries(filtered);
   };
 
+  const handleFilter = function (continent) {
+    const filtered = countries.filter(
+      (country) => country.region.toLowerCase() === continent.toLowerCase()
+    );
+    setFilteredCountries(filtered);
+  };
+
   useEffect(() => {
     setFilteredCountries(countries);
   }, [countries]);
 
   return (
     <>
-      <FilterBar onSearch={handleSearch} />
+      <FilterBar onSearch={handleSearch} onFilter={handleFilter} />
       <main className="main">
         {filteredCountries.map(
           ({

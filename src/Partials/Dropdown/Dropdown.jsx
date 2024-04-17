@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./Dropdown.css";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 
-function Dropdown() {
+function Dropdown({ onFilter }) {
   const [continent, setContinent] = useState("");
   const [open, setOpen] = useState(false);
 
   const continents = {
     africa: "Africa",
-    america: "America",
+    america: "Americas",
     asia: "Asia",
     europe: "Europe",
     oceania: "Oceania",
@@ -16,7 +16,10 @@ function Dropdown() {
 
   const handleSelected = function (e) {
     console.log(e.target.value);
-    setContinent(continents[e.target.value]);
+
+    const selectedContinent = continents[e.target.value];
+    setContinent(selectedContinent);
+    onFilter(selectedContinent);
     setOpen(false);
   };
 
